@@ -59,7 +59,7 @@
           
               <!-- Replaced Dropdown with single nav lnk to models -->
               <li class="nav-item">
-                <a id="navModels" class="nav-link"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="X3D Models" data-content="There are three X3D models: Coke, Sprite and Pepper">Models</a>
+                <a id="navModels" class="nav-link"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="X3D Models" data-content="There are four X3D models: Coke, Sprite, Dr Pepper and Fanta">Models</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
