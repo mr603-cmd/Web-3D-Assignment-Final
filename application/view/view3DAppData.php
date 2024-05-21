@@ -4,8 +4,29 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="application/css/bootstrap-4.4.1.css">
+
+    <!-- X3dom -->
+    <link rel='stylesheet' type='text/css' href='application/css/x3dom.css'>
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="css/all.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <!-- Use a light box to view images in the gallery -->
+    <link rel="stylesheet" type="text/css" href="application/css/jquery.fancybox.min.css">
+
 	<title>X3D Model Data</title> 
 	    <style>
+        body {
+            background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+        }
         h2 {
             color:white;
             margin: 5px;

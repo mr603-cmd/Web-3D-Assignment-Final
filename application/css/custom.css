@@ -19,7 +19,9 @@
 */
 
 body {
-    background-color: rgba(182, 231, 243, 1.0);
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
 }
 
 .main_contents {
@@ -43,12 +45,17 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     height: 200px;
 }
+
+#main_3d_image2 {
+    background-image: url(../assets/images/background_1400.jpg);
+    background-repeat: no-repeat;
+    height: 200px;
+}
 #main_text {
     float: left;
     margin: 5%;
     width: 90%;
     display: block;
-    background-color: rgba(255,255,255,0.8);
     padding: 10px;
     border-radius: 5px;
 }
@@ -95,7 +102,6 @@ h1, h2, h3, h4, h5, h6 {
     /* border-radius: .25rem;*/
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgba(182, 231, 243, 1.0);
  }
 
  .card-text {
@@ -146,6 +152,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 0px;
     padding-left: 3px;
     }
+
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
     
     /* New CSS rules to better position the navbar and increase its height, Bootstrap defaults tend to make your site look like a Bootstrap clone! 
     */
@@ -153,7 +169,6 @@ h1, h2, h3, h4, h5, h6 {
     /* CSS rule to overwrite the navbar background and border color — again, helps to stop your site looking like a Bootstrap clone! 
     */
     .navbar_coca_cola {
-        background-color: #760003; /* Set navbar background color */
         /* border-color: yellow; Sets the navbar border color */
         /* border-style: solid; */
         border-width: 0px;
@@ -200,13 +215,11 @@ h1, h2, h3, h4, h5, h6 {
     .navbar_coca_cola .navbar-nav > .active > a:hover, 
     .navbar_coca_cola .navbar-nav > .active > a:focus {
         color:  #760003; /* Font color for active font */
-        background-color: #3399ff; /* Blue color for background */
     }
 
     /* Lifted form the bootsrap.css file, and modified to emulate the nav-bar menu styling */
     .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
         color:  #760003; /* Font color for active font */
-        background-color: #3399ff; /* Blue color for background */
         border-color: #dee2e6 #dee2e6 #fff;
     }
 
@@ -224,7 +237,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .camera-btns {
-        /* background-color: rgba(0, 0, 255, 0.3);  */
         border-color: black; 
         border-style: solid;
         border-width: 0px;
@@ -302,7 +314,6 @@ h1, h2, h3, h4, h5, h6 {
     /* CSS rule to style the footer */
     .footer {
         color: #030303;
-        background-color: #760003; /* Set navbar footer background color same as header */
         height: 50px;
     }
 
@@ -354,14 +365,16 @@ h1, h2, h3, h4, h5, h6 {
 */
 @media (min-width: 576px) {
 
-    body {
-        background-color: rgb(202, 181, 181);
-    }
-
     #main_3d_image {
         background-image: url(../assets/images/main_3D_768.jpg);
         background-repeat: no-repeat;
         height: 288px;
+    }
+
+    #main_3d_image2 {
+        background-image: url(/assets/images/background_1400.jpg);
+        background-repeat: no-repeat;
+        height: 200px;
     }
 
     #main_text {
@@ -377,13 +390,21 @@ h1, h2, h3, h4, h5, h6 {
         background-color: rgb(202, 181, 181);
     }
 
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
     .navbar_coca_cola {
-        background-color: grey; 
         min-height: 90px;
     }
 
     .camera-btns {
-        /* background-color: rgba(0, 0, 255, 0.3);  */
         border-color: black; 
         border-style: solid;
         border-width: 0px;
@@ -417,7 +438,6 @@ h1, h2, h3, h4, h5, h6 {
 
     /* CSS rule to style the footer */
     .footer {
-        background-color: #94d874; 
         height: 60px;
     }
 
@@ -445,14 +465,17 @@ h1, h2, h3, h4, h5, h6 {
 */
 @media (min-width: 768px) { 
     
-    body {
-        background-color: rgb(218, 216, 148);
-    }
 
     #main_3d_image {
         background-image: url(../assets/images/main_3D_970.jpg);
         background-repeat: no-repeat;
         height: 363px;
+    }
+
+    #main_3d_image2 {
+        background-image: url(../assets/images/background_1400.jpg);
+        background-repeat: no-repeat;
+        height: 200px;
     }
 
     .card {
@@ -461,6 +484,16 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 10px;
         margin-bottom: 10px;
         background-color: rgb(218, 216, 148);
+    }
+
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
     }
 
     #main_text {
@@ -530,8 +563,17 @@ h1, h2, h3, h4, h5, h6 {
         padding-left: 8px;
     }
 
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
     .navbar_coca_cola {
-        background-color: grey; 
         min-height: 90px;
     }
 
@@ -570,7 +612,6 @@ h1, h2, h3, h4, h5, h6 {
 
     /* CSS rule to style the footer */
     .footer {
-        background-color: #b890b1;
         height: 60px;
     }
 
@@ -596,14 +637,17 @@ h1, h2, h3, h4, h5, h6 {
 */
 @media (min-width: 992px) { 
     
-    body {
-        background-color: rgb(185, 185, 178);
-    }
 
     #main_3d_image {
-        background-image: url(../assets/images/main_3D2_1400.jpg);
+        background-image: url(../assets/images/main_3D_1400.jpg);
         background-repeat: no-repeat;
         height: 100%;
+    }
+
+    #main_3d_image2 {
+        background-image: url(/assets/images/background_1400.jpg);
+        background-repeat: no-repeat;
+        height: 200px;
     }
 
     #main_text {
@@ -677,8 +721,17 @@ h1, h2, h3, h4, h5, h6 {
         padding-left: 12px;
     }
 
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
     .navbar_coca_cola {
-        background-color: grey; 
         min-height: 120px;
     }
 
@@ -717,7 +770,6 @@ h1, h2, h3, h4, h5, h6 {
 
     /* CSS rule to style the footer */
     .footer {
-        background-color: grey;
         height: 75px;
     }
 

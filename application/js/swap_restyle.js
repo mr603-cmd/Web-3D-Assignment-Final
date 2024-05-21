@@ -12,6 +12,127 @@ function swap(selected) {
 	document.getElementById(selected).style.display = 'block';
 }
 
+function selectPage() {
+
+	$('#home').show();
+	$('#about').hide();
+	$('#models').hide();
+	$('#interaction').hide();
+	$('#cokeDescription').hide();
+	$('#spriteDescription').hide(); 
+	$('#pepperDescription').hide(); 
+
+
+	$('#navHome').click(function(){
+		$('#home').show();
+		$('#about').hide();
+		$('#models').hide();
+		$('#interaction').hide();
+		$('#cokeDescription').hide();
+		$('#spriteDescription').hide(); 
+		$('#pepperDescription').hide(); 	  
+	});
+
+	$('#navAbout').click(function(){
+		$('#home').hide();
+		$('#about').show();
+		$('#models').hide();
+		$('#interaction').hide();
+		$('#cokeDescription').hide();
+		$('#spriteDescription').hide(); 
+		$('#pepperDescription').hide(); 	  
+	});
+
+	$('#navModels').click(function(){
+		$('#home').hide();
+		$('#about').hide();
+		$('#models').show();
+		$('#interaction').show(); 
+		$('#cokeDescription').show();
+		$('#spriteDescription').hide(); 
+		$('#pepperDescription').hide();
+		$("#x3dModelTitle_coke").show();
+		$("#x3dModelTitle_sprite").hide();
+		$("#x3dModelTitle_pepper").hide();
+		$("#x3dCreationMethod_coke").show();
+		$("#x3dCreationMethod_sprite").hide();
+		$("#x3dCreationMethod_pepper").hide(); 
+	});
+}
+
+
+function cokeDescription() {
+	$("button").click(function(){
+		
+		$("#cokeDescription").show();
+        $("#spriteDescription").hide();
+		$("#pepperDescription").hide();
+		
+		$("#x3dModelTitle_coke").show();
+		$("#x3dModelTitle_sprite").hide();
+		$("#x3dModelTitle_pepper").hide();
+
+		$("#x3dCreationMethod_coke").show();
+		$("#x3dCreationMethod_sprite").hide();
+		$("#x3dCreationMethod_pepper").hide();
+
+    }); 
+}
+
+function spriteDescription() {
+    $("button").click(function(){
+
+        $("#cokeDescription").hide();
+        $("#spriteDescription").show();
+		$("#pepperDescription").hide();
+		
+		$("#x3dModelTitle_coke").hide();
+		$("#x3dModelTitle_sprite").show();
+		$("#x3dModelTitle_pepper").hide();
+
+		$("#x3dCreationMethod_coke").hide();
+		$("#x3dCreationMethod_sprite").show();
+		$("#x3dCreationMethod_pepper").hide();
+    }); 
+}
+
+function pepperDescription() {
+    $("button").click(function(){
+
+        $("#cokeDescription").hide();
+        $("#spriteDescription").hide();
+		$("#pepperDescription").show();
+		
+		$("#x3dModelTitle_coke").hide();
+		$("#x3dModelTitle_sprite").hide();
+		$("#x3dModelTitle_pepper").show();
+
+		$("#x3dCreationMethod_coke").hide();
+		$("#x3dCreationMethod_sprite").hide();
+		$("#x3dCreationMethod_pepper").show();
+    }); 
+}
+
+function fantaDescription() {
+    $("button").click(function(){
+
+        $("#cokeDescription").hide();
+        $("#spriteDescription").hide();
+		$("#pepperDescription").hide();
+		$("#fantaDescription").show();
+		
+		$("#x3dModelTitle_coke").hide();
+		$("#x3dModelTitle_sprite").hide();
+		$("#x3dModelTitle_pepper").hide();
+		$("#x3dModelTitle_fanta").show();
+
+		$("#x3dCreationMethod_coke").hide();
+		$("#x3dCreationMethod_sprite").hide();
+		$("#x3dCreationMethod_pepper").hide();
+		$("#x3dCreationMethod_fanta").show();
+    }); 
+}
+
 function changeLook() {
 	counter += 1;
 	switch (counter) {
