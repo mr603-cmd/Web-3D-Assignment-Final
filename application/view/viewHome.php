@@ -13,7 +13,7 @@
     <link rel='stylesheet' type='text/css' href='application/css/x3dom.css'>
 
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="application/css/all.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="application/css/custom.css">
@@ -79,7 +79,7 @@
           <div class="row">
             <div class="col-sm-4">
                 <div class="card">
-                <img class="card-img-top img-fluid img-thumbnail" src="assets/images/gallery_images/cokeCan-removebg-preview.png" alt="Coca Cola">                    <div class="card-body">
+                <img class="card-img-top img-fluid img-thumbnail" src="application/assets/images/gallery_images/cokeCan-removebg-preview.png" alt="Coca Cola">                    <div class="card-body">
                         <div id="title_left" class="card-title drinksText"></div>
                         <div id="subTitle_left" class="card-subtitle drinksText"></div>
                         <div id="description_left" class="card-text drinksText"></div>   
@@ -90,8 +90,8 @@
         
             <div class="col-sm-4">
                 <div class="card">
-<!--                     <a href="assets/images/render_images/sprite.jpg" data-fancybox data-caption="My 3D Sprite Bottle Render" class="img-narrow">
- -->                        <img class="card-img-top img-fluid img-thumbnail" src="assets/images/gallery_images/spriteCan-removebg-preview.png" alt="Sprite">
+<!--                     <a href="application/assets/images/render_images/sprite.jpg" data-fancybox data-caption="My 3D Sprite Bottle Render" class="img-narrow">
+ -->                        <img class="card-img-top img-fluid img-thumbnail" src="application/assets/images/gallery_images/spriteCan-removebg-preview.png" alt="Sprite">
 <!--                     </a>
  -->                    <div class="card-body">
                         <div id="title_centre" class="card-title drinksText"></div>
@@ -104,8 +104,8 @@
 
             <div class="col-sm-4">
                 <div class="card">
-<!--                     <a href="assets/images/render_images/pepper.jpg" data-fancybox data-caption="My 3D Pepper Cup Render" class="thumbnail">
- -->                        <img class="card-img-top img-fluid img-thumbnail" src="assets/images/gallery_images/pepperCan-removebg-preview.png" alt="Dr Pepper">
+<!--                     <a href="application/assets/images/render_images/pepper.jpg" data-fancybox data-caption="My 3D Pepper Cup Render" class="thumbnail">
+ -->                        <img class="card-img-top img-fluid img-thumbnail" src="application/assets/images/gallery_images/pepperCan-removebg-preview.png" alt="Dr Pepper">
 <!--                     </a>
  -->                    <div class="card-body">
                         <div id="title_right" class="card-title drinksText"></div>
@@ -118,8 +118,8 @@
 
             <div class="col-sm-4">
                 <div class="card">
-<!--                     <a href="assets/images/render_images/pepper.jpg" data-fancybox data-caption="My 3D Pepper Cup Render" class="thumbnail">
- -->                        <img class="card-img-top img-fluid img-thumbnail" src="assets/images/gallery_images/fantaCan-removebg-preview.png" alt="Fanta">
+<!--                     <a href="application/assets/images/render_images/pepper.jpg" data-fancybox data-caption="My 3D Pepper Cup Render" class="thumbnail">
+ -->                        <img class="card-img-top img-fluid img-thumbnail" src="application/assets/images/gallery_images/fantaCan-removebg-preview.png" alt="Fanta">
 <!--                     </a>
  -->                    <div class="card-body">
                         <div id="title_bl" class="card-title drinksText"></div>
@@ -165,16 +165,16 @@
                               <scene>
                                   <Switch whichChoice="0" id='SceneSwitch'>
                                       <transform>
-                                          <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/x3d/cokeCanFinal.x3d" > </inline>
+                                          <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="application/assets/x3d/cokeCanFinal.x3d" > </inline>
                                       </transform>
                                       <transform>
-                                          <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/x3d/spriteCanFinal.x3d"> </inline>
+                                          <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="application/assets/x3d/spriteCanFinal.x3d"> </inline>
                                       </transform>
                                       <transform>
-                                          <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/x3d/pepperCanFinal.x3d"> </inline>
+                                          <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="application/assets/x3d/pepperCanFinal.x3d"> </inline>
                                       </transform>
                                       <transform>
-                                          <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="assets/x3d/fantaCanFinal.x3d"> </inline>
+                                          <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" url="application/assets/x3d/fantaCanFinal.x3d"> </inline>
                                       </transform>
                                   </Switch>
                               </scene>
@@ -241,7 +241,7 @@
                         <div id="title_pepper" class="card-title drinksText"></div>
                         <div id="subTitle_pepper" class="card-subtitle drinksText"></div>
                         <div id="description_pepper" class="card-text drinksText"></div>  
-                        <a href="https://www.coca-cola.com/gb/en/brands/dr-pepper" class="btn btn-primary btn-responisve">Visit Pepper.</a>                 
+                        <a href="https://www.coca-cola.com/gb/en/brands/dr-pepper" class="btn btn-primary btn-responisve">Visit Pepper</a>                 
                     </div>
                 </div>
             </div>
@@ -255,11 +255,11 @@
                         <div id="title_fanta" class="card-title drinksText"></div>
                         <div id="subTitle_fanta" class="card-subtitle drinksText"></div>
                         <div id="description_fanta" class="card-text drinksText"></div>  
-                        <a href="https://www.coca-cola.com/gb/en/brands/dr-pepper" class="btn btn-primary btn-responisve">Visit Pepper.</a>                 
+                        <a href="https://www.coca-cola.com/gb/en/brands/fanta" class="btn btn-primary btn-responisve">Visit Fanta</a>                 
                     </div>
                 </div>
             </div>
-        </div> <!-- End pepper description contents -->  
+        </div> <!-- End fanta description contents -->  
 
     </div>  <!-- End 3D App SPA Contents --> 
 
@@ -305,7 +305,7 @@
     <script src="application/js/gallery_generator.js"></script>
 
     <!-- JavaScript model interaction  -->
-    <script src="scripts/js/getJsonData.js"></script>
+    <script src="application/js/getJsonData.js"></script>
 
     <!-- JavaScript model interactions -->
     <script src="application/js/modelInteractions.js"></script>

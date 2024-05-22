@@ -7,7 +7,7 @@ $(document).ready(function() {
 	// Temporarily stores server response while code is generated
 	var response;
 	// Set up a path variable to the PHP function that reads the image directory to find the thumbnail file names
-	var send = "scripts/php/hook.php";
+	var send = "application/view/hook.php";
 	// Open the connection to the web server
 	xmlHttp.open("GET", send, true);
 	// Tell the server that the client has no outgoing message, i.e. we are sending nothing to the server
@@ -22,8 +22,8 @@ $(document).ready(function() {
 			for (var i=0;i<response.length;i++) {
 				// Handeler to build the HTML string
 				// Use this to provide a link to the image
-				htmlCode += '<a href="assets/images/gallery_images' + response[i] +' " ' + ' data-fancybox data-caption="My X3D model render" > ';
-				htmlCode += '<img class="card-img-top img-thumbnail" src="assets/images/gallery_images' + response[i] + '"/>';
+				htmlCode += '<a href="application/assets/images/gallery_images' + response[i] +' " ' + ' data-fancybox data-caption="My X3D model render" > ';
+				htmlCode += '<img class="card-img-top img-thumbnail" src="application/assets/images/gallery_images' + response[i] + '"/>';
 				htmlCode += '</a>';			
 			}
 			

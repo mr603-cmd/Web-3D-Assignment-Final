@@ -22,8 +22,8 @@
 		},
 		{
 			"title": "Fanta",
-			"subTitle": "Texas, 1885",		
-			"description": "Fantas unique, sparkling blend of 23 fruit flavours has been around for well over a century and its still the same, with that distinctive flavour you just cant quite put your tongue on. It was created by Texas pharmacist Charles Alderton in 1885. The distinctive, bold taste of Dr Pepper has been popular ever since."
+			"subTitle": "Germany, 1940",		
+			"description": "Fanta is an orange soda drink. It was created in Germany in 1940. Fanta was created during World War II in Nazi Germany by the German Coca-Cola (GmbH) bottling company."
 		},
 		{
 			"x3dModelTitle": "Coca Cola X3D Model",
@@ -45,6 +45,13 @@
 			"title": "Dr Pepper — Liquid Sunshine",
 			"subTitle": "23 fruit flavours",		
 			"description": "Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's still the same, with that distinctive flavour you just can't quite put your tongue on. It was created by Texas pharmacist Charles Alderton in 1885. He gave a sample of the first ever batch to Wade Morrison, a local shop owner, and Mr Morrison instantly agreed to stock the drink. The distinctive, bold taste of Dr Pepper has been popular ever since."
+		},
+		{
+			"x3dModelTitle": "Fanta X3D Model",
+			"x3dCreationMethod": "This X3D model of the pepper cup has been created in 3ds Max, exported to VRML97 and converted, using the instantreality transcoders, to X3D for display online.",
+			"title": "Fanta — Bold choice, bold taste",
+			"subTitle": "Orange flavoured",		
+			"description": "Fanta is an orange soda drink. It was created in Germany in 1940. Fanta was created during World War II in Nazi Germany by the German Coca-Cola (GmbH) bottling company."
 		},
 		{
 			"galleryTitle": "3D Images",
