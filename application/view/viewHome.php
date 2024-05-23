@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="application/css/bootstrap-4.4.1.css">
 
     <!-- X3dom -->
@@ -80,7 +79,7 @@
         </select>
     </form> 
     <!-- Inject the HTML into this div tag placeholder -->
-    <div id="placeholder" style='margin:5px; padding:10px; color:white'>Insert data here</div>
+    <div id="placeholder" style='margin:5px; padding:10px; color:white'></div>
 
     <script>
     $(document).ready(function(){
@@ -226,7 +225,7 @@
                       <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                           <li class="nav-item">
-                            <a id="x3dModels" class="nav-link"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="X3D Models" data-content="In this section, you can interact with each X3D ">X3D Models</a>
+                            <a id="x3dModels" class="nav-link"  href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="X3D Models" data-content="In this section, you can interact with each X3D model.">X3D Models</a>
                           </li>
                         </ul>
                       </div>

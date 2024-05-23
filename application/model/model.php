@@ -1,7 +1,7 @@
 <?php
 
 class Model {
-	// Property declaration, in this case we are declaring a variable or handeler that points to the database connection, this will become a PDO object
+	// Property declaration
 	public $dbhandle;
 	
 	// Method to create database connection using PHP Data Objects (PDO) as the interface to SQLite
@@ -15,9 +15,9 @@ class Model {
 			PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //turn on errors in the form of exceptions
 			PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
 		];
-		// Then create a connection to a database with the PDO() function
+		// Creating a connection to a database with the PDO() function
 		try {	
-			// Change connection string for different databases, currently using SQLite
+			// Connection string for database.
 			$this->dbhandle = new PDO($dsn, $user, $pass, $options);
 		}
 		catch (PDOEXception $e) {
@@ -31,7 +31,7 @@ class Model {
 	{
 		try{
 			$sql = 'SELECT brand FROM Model_3D';
-			// Use PDO query() to query the database with the prepared SQL statement
+			// Using PDO query() to query the database with the prepared SQL statement
 			$stmt = $this->dbhandle->query($sql);
 			// Set up an array to return the results to the view
 			$result = null;
@@ -102,6 +102,7 @@ class Model {
 			while ($data = $stmt->fetch()) {
 				ChromePhp::log($data);	
 
+				$result[$i]['brand'] = $data['brand'];
 				$result[$i]['x3dModelTitle'] = $data['x3dModelTitle'];
 				$result[$i]['x3dCreationMethod'] = $data['x3dCreationMethod'];
 				$result[$i]['modelTitle'] = $data['modelTitle'];
@@ -168,8 +169,8 @@ class Model {
 		try {
 			$this->dbhandle->exec(
 			"UPDATE Model_3D
-			SET $field = $value
-			WHERE Id = $id;");
+			SET '$field' = '$value'
+			WHERE Id = '$id';");
 			return "'".$field."' field updated successfully 
 			to '".$value."' where Id is '".$id."' inside test1.db";	
 		}
@@ -179,40 +180,6 @@ class Model {
 		$this->dbhandle = NULL;
 	}
 
-	/* 
-	public function dbGetSingleValue($value)
-	{
-		try{
-			$this->dbhandle->exec(
-			
-		}
-		catch(PD0EXception $e) {
-			print new Exception($e->getMessage());
-		}
-		//$this->dbhandle = NULL;
-	} */
-
-	/* $stmt = $conn->query("SELECT firstnme, lastname FROM employee");
-	while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-		print "Name: <p>{$row[0] $row[1]}</p>";
-	} */
-
-
-	/* public function dbGetFieldProperty()
-	{
-		try{
-			$this->dbhandle->exec(
-			
-		}
-		catch(PD0EXception $e) {
-			print new Exception($e->getMessage());
-		}
-		//$this->dbhandle = NULL;
-	}*/
-
-	
-
-	
 	//Method to simulate the model data
 	public function model3D_info()
 	{

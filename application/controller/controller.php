@@ -60,7 +60,7 @@ class Controller {
 		echo "<br /><input type='submit' value='Submit'>";
 		echo "</form>";
 		$field = $_POST['Field'];
-		$data = $this->model->dbGetSingleField($field);
+		$data = $this->model->dbGetSingleField('x3dModelTitle');
 		ChromePhp::log($data);	
 		$this->load->view('viewSingleField', $data);
 	}
@@ -81,7 +81,7 @@ class Controller {
 		echo "</form>";
 		$field = $_POST['newField'];
 		ChromePhp::log($field);	
-		$data = $this->model->dbInsertField($field);
+		$data = $this->model->dbInsertField('KCal');
 		$this->load->view('viewMessage', $data);
 	}
 
@@ -97,7 +97,7 @@ class Controller {
 		$field = $_POST['updatedField'];
 		$newData = $_POST['updatedData'];
 		$id = $_POST['updatedID'];
-		$data = $this->model->dbUpdateField($field, $newData, $id);
+		$data = $this->model->dbUpdateField('brand','Original Fanta', 2);
 		$this->load->view('viewMessage', $data);
 	}
 
@@ -109,12 +109,9 @@ class Controller {
 
 	function apiLoadImage()
 	{
-	   // Get the brand data from the (this) Model using the dbGetBrand() meyhod in this Model class	
+	   // Get the brand data from the (this) Model using the dbGetBrand() method in this Model class	
 	   ChromePhp::warn('controller.php: [apiLoadImage] Get the Brand data');	
 	   $data = $this->model->dbGetBrand();
-	   // Note, the viewDrinks.php view being loaded here calls a new model
-	   // called modelDrinkDetails.php, which is not part of the Model class
-	   // It is a separate model illustrating that you can have many models
 	   ChromePhp::log($data);  
 	   $this->load->view('viewDrinks', $data);
 	}

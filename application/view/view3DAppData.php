@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="application/css/bootstrap-4.4.1.css">
 
     <!-- X3dom -->
@@ -70,13 +69,16 @@
 <body>
         <div class="boxModel">
                 <div class="boxText">
+                    <h1><?php echo "Brand" ?></h1>
+                </div>
+                <div class="boxText">
                     <h1><?php echo "Model Title" ?></h1>
                 </div>
                 <div class="boxText">
                     <h1><?php echo "Creation Method" ?></h1>
                 </div>
                 <div class="boxText">
-                    <h1><?php echo "Brand" ?></h1>
+                    <h1><?php echo "Model Title" ?></h1>
                 </div>
                 <div class="boxText">
                     <h1><?php echo "Model Subtitle" ?></h1>
@@ -88,6 +90,9 @@
 
     	<?php for ($i=0; $i <count ($data); $i++){ ?>
             <div class="boxModel">
+                <div class="boxText">
+                    <h2><?php echo $data[$i]['brand'] ?></h2>
+                </div>
                 <div class="boxText">
                     <h2><?php echo $data[$i]['x3dModelTitle'] ?></h2>
                 </div>
@@ -111,16 +116,16 @@
         <div class="col-sm-8">
             <div class="card-body">
                 <div class="card-header">
-                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apigetsinglefield" class="btn btn-primary btn-responsive">Get a Single Database Field</a>                 
+                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apigetsinglefield" class="btn btn-primary btn-responsive" style="color:#FF0000;">Get a Single Database Field</a>                 
                 </div>
             </div>
             <div class="card-body">
                 <div class="card-header">
-                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apiinsertfield" class="btn btn-primary btn-responsive">Insert a Database Field</a>                 
+                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apiinsertfield" class="btn btn-primary btn-responsive" style="color:#FF0000;">Insert a Database Field</a>                 
             </div>
             <div class="card-body">
                 <div class="card-header">
-                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apiupdatefield" class="btn btn-primary btn-responsive">Update a Database Field</a>                 
+                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apiupdatefield" class="btn btn-primary btn-responsive" style="color:#FF0000;">Update a Database Field</a>                 
             </div>
 
         </div>
