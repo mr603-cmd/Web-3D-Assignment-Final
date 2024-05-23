@@ -111,7 +111,7 @@
         <div class="col-sm-8">
             <div class="card-body">
                 <div class="card-header">
-                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apiinsertfield" class="btn btn-primary btn-responsive">Get a Single Database Field</a>                 
+                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apigetsinglefield" class="btn btn-primary btn-responsive">Get a Single Database Field</a>                 
                 </div>
             </div>
             <div class="card-body">
@@ -120,7 +120,7 @@
             </div>
             <div class="card-body">
                 <div class="card-header">
-                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apiinsertfield" class="btn btn-primary btn-responsive">Update a Database Field</a>                 
+                    <a href="https://users.sussex.ac.uk/~mr603/3dapp/assignment/index.php/apiupdatefield" class="btn btn-primary btn-responsive">Update a Database Field</a>                 
             </div>
 
         </div>

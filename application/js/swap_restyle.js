@@ -51,12 +51,15 @@ function selectPage() {
 		$('#cokeDescription').show();
 		$('#spriteDescription').hide(); 
 		$('#pepperDescription').hide();
+		$('#fantaDescription').hide();
 		$("#x3dModelTitle_coke").show();
 		$("#x3dModelTitle_sprite").hide();
 		$("#x3dModelTitle_pepper").hide();
+		$("#x3dModelTitle_fanta").hide();
 		$("#x3dCreationMethod_coke").show();
 		$("#x3dCreationMethod_sprite").hide();
 		$("#x3dCreationMethod_pepper").hide(); 
+		$("#x3dCreationMethod_fanta").hide(); 
 	});
 }
 
@@ -67,14 +70,17 @@ function cokeDescription() {
 		$("#cokeDescription").show();
         $("#spriteDescription").hide();
 		$("#pepperDescription").hide();
+		$("#fantaDescription").hide();
 		
 		$("#x3dModelTitle_coke").show();
 		$("#x3dModelTitle_sprite").hide();
 		$("#x3dModelTitle_pepper").hide();
+		$("#x3dCreationMethod_fanta").hide();
 
 		$("#x3dCreationMethod_coke").show();
 		$("#x3dCreationMethod_sprite").hide();
 		$("#x3dCreationMethod_pepper").hide();
+		$("#x3dCreationMethod_fanta").hide();
 
     }); 
 }
@@ -85,14 +91,17 @@ function spriteDescription() {
         $("#cokeDescription").hide();
         $("#spriteDescription").show();
 		$("#pepperDescription").hide();
+		$("#fantaDescription").hide();
 		
 		$("#x3dModelTitle_coke").hide();
 		$("#x3dModelTitle_sprite").show();
 		$("#x3dModelTitle_pepper").hide();
+		$("#x3dCreationMethod_fanta").hide();
 
 		$("#x3dCreationMethod_coke").hide();
 		$("#x3dCreationMethod_sprite").show();
 		$("#x3dCreationMethod_pepper").hide();
+		$("#x3dCreationMethod_fanta").hide();
     }); 
 }
 
@@ -102,14 +111,17 @@ function pepperDescription() {
         $("#cokeDescription").hide();
         $("#spriteDescription").hide();
 		$("#pepperDescription").show();
+		$("#fantaDescription").hide();
 		
 		$("#x3dModelTitle_coke").hide();
 		$("#x3dModelTitle_sprite").hide();
 		$("#x3dModelTitle_pepper").show();
+		$("#x3dModelTitle_fanta").hide();
 
 		$("#x3dCreationMethod_coke").hide();
 		$("#x3dCreationMethod_sprite").hide();
 		$("#x3dCreationMethod_pepper").show();
+		$("#x3dCreationMethod_fanta").hide();
     }); 
 }
 

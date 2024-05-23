@@ -29,15 +29,38 @@ class Model {
 
 	public function dbGetBrand()
 	{
-		// Return the Brand Names
-		return array("-", "Coke", "Coke Light","Coke Zero","Sprite", "Dr Pepper", "Fanta");
+		try{
+			$sql = 'SELECT brand FROM Model_3D';
+			// Use PDO query() to query the database with the prepared SQL statement
+			$stmt = $this->dbhandle->query($sql);
+			// Set up an array to return the results to the view
+			$result = null;
+			// Set up a variable to index each row of the array
+			$i=-0;
+			// Use a while loop to loop through the rows	
+			while ($data = $stmt->fetch()) {
+				ChromePhp::log($data);	
+
+				$result[$i] = $data['brand'];
+				//increment the row index
+				$i++;
+			}
+		}
+		catch (PD0EXception $e) {
+			print new Exception($e->getMessage());
+		}
+		// Close the database connection
+		$this->dbhandle = NULL;
+		// Send the response back to the view
+		return $result;
+	
 	}
 
 	
 	public function dbCreateTable()
 	{
 		try {
-			$this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelSubtitle TEXT, modelDescription TEXT)");
+			$this->dbhandle->exec("CREATE TABLE Model_3D (Id INTEGER PRIMARY KEY, brand TEXT, x3dModelTitle TEXT, x3dCreationMethod TEXT, modelTitle TEXT, modelSubtitle TEXT, modelDescription TEXT)");
 			return "Model_3D table is successfully created inside test1.db file";
 		}
 		catch (PD0EXception $e){
@@ -50,14 +73,14 @@ class Model {
 	{
 		try{
 			$this->dbhandle->exec(
-			"INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (1, 'X3D Coke Model', 'Blender', 'Coke Can','Original Coca Cola','fragrant, caramel-coloured liquid and, when it was done, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special!'); " .
-			"INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (2, 'X3D Sprite Model', 'Blender', 'Sprite Can','Original Sprite','Leading lemon and lime flavoured soft drink'); " .
-			"INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (3, 'X3D Fanta Model', 'Blender', 'Fanta Can','Original Fanta','Leading orange flavoured soft drink'); " .
-			"INSERT INTO Model_3D (Id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
-				VALUES (4, 'X3D Pepper Model', 'Blender', 'Dr Pepper Can','Original Dr Pepper','sparkling blend of 23 fruit flavours has been around for well over a century'); ");
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (1, 'Coca Cola', 'X3D Coke Model', 'Blender', 'Coke Can','Original Coca Cola','fragrant, caramel-coloured liquid and, when it was done, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special!'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (2, 'Sprite', 'X3D Sprite Model', 'Blender', 'Sprite Can','Original Sprite','Leading lemon and lime flavoured soft drink'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (3, 'Fanta', 'X3D Fanta Model', 'Blender', 'Fanta Can','Original Fanta','Leading orange flavoured soft drink'); " .
+			"INSERT INTO Model_3D (Id, brand, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) 
+				VALUES (4, 'Dr Pepper', 'X3D Pepper Model', 'Blender', 'Dr Pepper Can','Original Dr Pepper','sparkling blend of 23 fruit flavours has been around for well over a century'); ");
 			return "X3D model data inserted successfully inside test1.db";
 		}
 		catch(PD0EXception $e) {
@@ -111,7 +134,7 @@ class Model {
 			// output data of each row
 			while($data = $stmt->fetch()) {
 				ChromePhp::log($data);	
-				$result[$i]['x3dModelTitle'] = $data['x3dModelTitle'];
+				$result[$i][$field] = $data[$field];
 				ChromePhp::log($result);	
 				//increment the row index
 				$i++;
@@ -131,7 +154,7 @@ class Model {
 		try{
 			$this->dbhandle->exec(
 			"ALTER TABLE Model_3D
-			ADD $field varchar(255);");
+			ADD '$field' varchar(255);");
 			return "'".$field."' field inserted successfully inside test1.db";
 		}
 		catch(PD0EXception $e) {

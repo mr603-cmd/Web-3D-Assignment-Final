@@ -22,7 +22,7 @@ class Controller {
     // home page function
 	function home()
 	{
-		$data = $this->model->model3D_info();
+		$data = $this->model->dbGetBrand();
 		$this->load->view('viewHome', $data);
 	}
 
@@ -54,7 +54,13 @@ class Controller {
 
 	function apiGetSingleField()
 	{
-		$data = $this->model->dbGetSingleField('x3dModelTitle');
+		echo "<form method='POST'>";
+		echo "Field name: ";
+		echo "<input name='Field' type='text' />";
+		echo "<br /><input type='submit' value='Submit'>";
+		echo "</form>";
+		$field = $_POST['Field'];
+		$data = $this->model->dbGetSingleField($field);
 		ChromePhp::log($data);	
 		$this->load->view('viewSingleField', $data);
 	}
@@ -68,21 +74,30 @@ class Controller {
 
 	function apiInsertField()
 	{
-		/* echo "<form>";
+		echo "<form method='POST'>";
 		echo "New field name: ";
 		echo "<input name='newField' type='text' />";
 		echo "<br /><input type='submit' value='Submit'>";
 		echo "</form>";
-		ChromePhp::log("Here");	
 		$field = $_POST['newField'];
-		ChromePhp::log($field);	 */
-		$data = $this->model->dbInsertField('KCal');
+		ChromePhp::log($field);	
+		$data = $this->model->dbInsertField($field);
 		$this->load->view('viewMessage', $data);
 	}
 
 	function apiUpdateField()
 	{
-		$data = $this->model->dbUpdateField('x3dModelTitle', 'X3D Fanta Model', 3);
+		echo "<form method='POST'>";
+		echo "Field name: ";
+		echo "<input name='updatedField' type='text' />";
+		echo "<input name='updatedData' type='text' />";
+		echo "<input name='updatedID' type='number' />";
+		echo "<br /><input type='submit' value='Submit'>";
+		echo "</form>";
+		$field = $_POST['updatedField'];
+		$newData = $_POST['updatedData'];
+		$id = $_POST['updatedID'];
+		$data = $this->model->dbUpdateField($field, $newData, $id);
 		$this->load->view('viewMessage', $data);
 	}
 
